@@ -1,0 +1,106 @@
+# insert customers
+INSERT INTO Customers (CustomerID, FirstName, LastName, Phone, Email) VALUES 
+(1, "Takashi", "Ito", 351786345, "asdf@loi1.com"), 
+(2, "Jane", "Murphy", 351567243, "ateyf@loi1.com"), 
+(3, "Laurina", "Delgado", 351342597, "asjkxc@loi1.com"), 
+(4, "Benjamin", "Clauss", 351342509, "asxvcntf@loi1.com"), 
+(5, "Altay", "Ayhan", 351208983, "awertysdf@loi1.com"), 
+(6, "Greta", "Galkina", 351298755, "asetxsdf@loi1.com"); 
+
+#insert staff
+INSERT INTO Staff (StaffID, FirstName, LastName, Role, Salary) VALUES    
+(1, "Seamus", "Hogan", "Manager", 70000),    
+(2, "Thomas", "Eriksson", "Assistant", 53000),   
+(3, "Simon", "Tolo", "Executive", 101000),   
+(4, "Francesca", "Soffia", "Assistant", 50000),   
+(5, "Emily", "Sierra", "Accountant", 66000),    
+(6, "Greta", "Galkina", "Accountant", 65000), 
+(7, "Maria", "Carter", "Executive", 100000), 
+(8, "Rick", "Griffin", "Manager", 68000); 
+
+#insert bookings
+INSERT INTO Bookings (BookingID, Date, Time, TableNo, NumberOfGuests) VALUES 
+(1, '2021-11-10', '17:00:00', 7, 5),    
+(2, '2021-11-10', '18:00:00', 3, 2), 
+(3, '2021-11-11', '17:30:00', 2, 5),  
+(4, '2021-11-11', '19:00:00', 5, 2),  
+(5, '2021-11-11', '20:00:00', 3, 2), 
+(6, '2021-11-11', '18:00:00', 3, 5),  
+(7, '2021-11-12', '18:30:00', 5, 2),  
+(8, '2021-11-12', '17:00:00', 3, 2), 
+(9, '2021-11-13', '17:00:00', 7, 5),  
+(10, '2021-11-14', '17:30:00', 5, 2),  
+(11, '2021-11-14', '18:00:00', 3, 2);
+
+#insert MenuItems
+INSERT INTO MenuItems (MenuItemID, CourseName, StarterName, DesertName) VALUES  
+(1,'Meatlovers','Breadsticks', 'Ice Cream'),
+(2,'Flatbread','Bruschetta', 'Wine'),
+(3, 'Minestrone', 'Calamari', 'Gelato'),
+(4, 'Tomato bread','Olives', 'Dates'),
+(5, 'Falafel', 'Hummas', 'Pitas'),
+(6, 'Hummus', 'Snack', 'Tea'),
+(7, 'Greek salad', 'Olives', 'Backlava'),
+(8, 'Bean soup', 'Salad', 'Meal'),
+(9, 'Kebob', 'Hummas', 'Beer'),
+(10,'Gyro', 'Fries', 'Uzo'),
+(11, 'Ice cream', 'Cookie Dough', 'Turkish Coffee'),
+(12, 'Cheesecake', 'Cookie', 'Ice Cream'),
+(13, 'Athens White wine', 'Crackers', 'Esspresso');
+
+#insert menu
+INSERT INTO Menu (MenuID, MenuItemID, MenuName, Cuisine) VALUES
+(1, 1, 'Pizza', 'Italian'),
+(2, 7, 'Moussaka', 'Greek'),
+(3, 10, 'Gyro', 'Greek'),
+(4, 13, 'Drinks First', 'Greek'),
+(5, 3, 'Pasta', 'Italian'),
+(6, 8, 'Soup', 'Italian'),
+(7, 12,'Desert First', 'Italian'),
+(8, 2, 'Starter', 'Italian'),
+(9, 5, 'Chick peas', 'Turkish'),
+(10, 9, 'Duna', 'Turkish'),
+(11, 4, 'Bread', 'Turkish'),
+(12, 6, 'Dip', 'Turkish'),
+(13, 11, 'Goat Milk', 'Turkish');
+
+#insert status
+INSERT INTO Status (StatusID, StatusName) VALUES
+(1, 'Delivered'),
+(2, 'In Route'),
+(3, 'Cooking'),
+(4, 'Cancelled'),
+(5, 'Returned'),
+(6, 'Failed');
+
+#insert OrderDeliveryStatus
+INSERT INTO OrderDeliveryStatus (DeliveryID, StatusID, OrderID, DeliveryDate) Values
+(1, 1, 1, '2021-11-11'),
+(2, 1, 2, '2021-11-10'),
+(3, 2, 3, '2021-11-11'),
+(4, 1, 4, '2021-11-10'),
+(5, 3, 5, '2021-11-11'),
+(6, 1, 6, '2021-11-11'),
+(7, 3, 7, '2021-11-12'),
+(8, 4, 8, '2021-11-14'),
+(9, 1, 9, '2021-11-11'),
+(10, 1, 10, '2021-11-12'),
+(11, 2, 11, '2021-11-13'),
+(12, 3, 12, '2021-11-14'),
+(13, 1, 13, '2021-11-14');
+
+#insert Orders
+INSERT INTO Orders (OrderID, CustomerID, StaffID, MenuID, BookingID, Date, Quantity, Cost) VALUES 
+(1, 3, 4, 6, 3, '2021-11-11', 2, 150),
+(2, 2, 5, 7, 2, '2021-11-10', 1, 60),
+(3, 4, 2, 11, 4, '2021-11-11', 6, 430),
+(4, 5, 1, 2, 1, '2021-11-10', 4, 200), 
+(5, 1, 3, 8, NULL, '2021-11-11', 5, 450),
+(6, 2, 5, 13, 5, '2021-11-11', 3, 245),
+(7, 6, 8, 12, 7, '2021-11-12', 9, 930),
+(8, 5, 3, 6, 10, '2021-11-14', 2, 140),
+(9, 3, 4, 8, 6, '2021-11-11', 4, 380), 
+(10, 2, 5, 7, 8, '2021-11-12', 3, 240),
+(11, 6, 7, 6, 9, '2021-11-13', 7, 650),
+(12, 2, 4, 9, NULL, '2021-11-14', 5, 560),
+(13, 4, 5, 1, 11, '2021-11-14', 7, 860);
