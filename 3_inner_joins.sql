@@ -1,3 +1,4 @@
+#create inner join
 SELECT c.CustomerID, concat(c.FirstName, " ", c.LastName) AS FullName, o.OrderID, o.Cost, m.MenuName, mi.CourseName, mi.StarterName
 FROM Customers as c 
 INNER JOIN Orders as o ON c.CustomerID = o.customerID
