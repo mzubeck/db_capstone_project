@@ -1,5 +1,8 @@
-#CREATE PROCEDURE GetMaxQuantity()
-#SELECT MAX(Quantity) as 'Max Quantity in Order'
-#FROM Orders;
+#create procedure 
+/*
+CREATE PROCEDURE GetMaxQuantity()
+SELECT MAX(Quantity) as 'Max Quantity in Order'
+FROM Orders;
+*/
 
 CALL GetMaxQuantity();
