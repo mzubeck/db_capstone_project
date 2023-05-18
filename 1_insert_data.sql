@@ -1,4 +1,4 @@
-# insert customers
+# insert Customers
 INSERT INTO Customers (CustomerID, FirstName, LastName, Phone, Email) VALUES 
 (1, "Takashi", "Ito", 351786345, "asdf@loi1.com"), 
 (2, "Jane", "Murphy", 351567243, "ateyf@loi1.com"), 
@@ -7,7 +7,7 @@ INSERT INTO Customers (CustomerID, FirstName, LastName, Phone, Email) VALUES
 (5, "Altay", "Ayhan", 351208983, "awertysdf@loi1.com"), 
 (6, "Greta", "Galkina", 351298755, "asetxsdf@loi1.com"); 
 
-#insert staff
+#insert Staff
 INSERT INTO Staff (StaffID, FirstName, LastName, Role, Salary) VALUES    
 (1, "Seamus", "Hogan", "Manager", 70000),    
 (2, "Thomas", "Eriksson", "Assistant", 53000),   
@@ -18,7 +18,7 @@ INSERT INTO Staff (StaffID, FirstName, LastName, Role, Salary) VALUES
 (7, "Maria", "Carter", "Executive", 100000), 
 (8, "Rick", "Griffin", "Manager", 68000); 
 
-#insert bookings
+#insert Bookings
 INSERT INTO Bookings (BookingID, Date, Time, TableNo, NumberOfGuests) VALUES 
 (1, '2021-11-10', '17:00:00', 7, 5),    
 (2, '2021-11-10', '18:00:00', 3, 2), 
@@ -48,7 +48,7 @@ INSERT INTO MenuItems (MenuItemID, CourseName, StarterName, DesertName) VALUES
 (12, 'Cheesecake', 'Cookie', 'Ice Cream'),
 (13, 'Athens White wine', 'Crackers', 'Esspresso');
 
-#insert menu
+#insert Menu
 INSERT INTO Menu (MenuID, MenuItemID, MenuName, Cuisine) VALUES
 (1, 1, 'Pizza', 'Italian'),
 (2, 7, 'Moussaka', 'Greek'),
@@ -64,7 +64,7 @@ INSERT INTO Menu (MenuID, MenuItemID, MenuName, Cuisine) VALUES
 (12, 6, 'Dip', 'Turkish'),
 (13, 11, 'Goat Milk', 'Turkish');
 
-#insert status
+#insert Status
 INSERT INTO Status (StatusID, StatusName) VALUES
 (1, 'Delivered'),
 (2, 'In Route'),
